@@ -49,7 +49,7 @@ export const chores: Chore[] = [
     title: "Check for a new Temporal CLI release",
     site: "github",
     url: "https://github.com/temporalio/cli/releases/latest",
-    task: "This page is the latest Temporal CLI release. Read its version number and date from this page. Do not open other pages.",
+    task: "This page is the latest Temporal CLI release. Read its version number and date from this page. Do not open other pages. If no date is shown, report the version only.",
   },
 ];
 

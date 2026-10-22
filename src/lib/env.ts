@@ -15,6 +15,8 @@ export function need(name: string): string {
 
 export const env = {
   model: process.env.SLOTH_MODEL ?? "groq/openai/gpt-oss-120b",
+  // Stagehand's small page lookups run on the 20b model, which has its own Groq rate limit
+  browserModel: process.env.SLOTH_BROWSER_MODEL ?? "groq/openai/gpt-oss-20b",
   // "local" drives Chrome on this laptop (free, for testing); "browserbase" uses cloud browsers
   browser: (process.env.SLOTH_BROWSER ?? "local") as "local" | "browserbase",
   // Where the demo sites are reachable from the browser. Browserbase needs the tunnel URL.

@@ -2,13 +2,22 @@
   "name": "sloth-errands",
   "private": true,
   "type": "module",
-  "scripts": {},
+  "scripts": {
+    "temporal": "sh scripts/temporal.sh",
+    "worker": "tsx src/temporal/worker.ts",
+    "sites": "tsx demo-sites/server.ts",
+    "night": "tsx scripts/night.ts",
+    "login": "tsx scripts/login.ts",
+    "try": "tsx scripts/try-chore.ts",
+    "typecheck": "tsc --noEmit"
+  },
   "dependencies": {
     "@ai-sdk/groq": "^4.0.68",
     "@browserbasehq/stagehand": "^4.3.0",
     "@mastra/core": "^1.79.0",
     "@temporalio/activity": "^1.24.0",
     "@temporalio/client": "^1.24.0",
+    "@temporalio/common": "^1.24.0",
     "@temporalio/worker": "^1.24.0",
     "@temporalio/workflow": "^1.24.0",
     "ai": "^7.0.149",

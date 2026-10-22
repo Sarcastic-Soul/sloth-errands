@@ -18,7 +18,7 @@ async function firstPage(browser: { context: { pages(): Promise<any[]> | any[] }
 }
 
 export async function openBrowser(opts: { site: string; contextId?: string; headless?: boolean }): Promise<BrowserRun> {
-  const model = { modelName: env.model as `groq/${string}`, apiKey: need("GROQ_API_KEY") };
+  const model = { modelName: env.browserModel as `groq/${string}`, apiKey: need("GROQ_API_KEY") };
 
   if (env.browser === "browserbase") {
     const browser = await browserbase.launch({

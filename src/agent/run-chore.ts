@@ -26,7 +26,7 @@ export class SiteDownError extends Error {}
 
 export async function runChore(
   chore: Chore,
-  opts: { contextId?: string; approvedAction?: { action: string; url: string }; onStep?: (s: string) => void } = {},
+  opts: { contextId?: string; approvedAction?: { action: string; url: string }; isRetry?: boolean; onStep?: (s: string) => void } = {},
 ): Promise<ChoreResult> {
   const steps: string[] = [];
   const step = (s: string) => {
@@ -139,7 +139,7 @@ export async function runChore(
       name: "Sloth",
       model: env.model,
       instructions: `You do one web chore for the user while they sleep. Work step by step with the tools.
-Today is ${new Date().toDateString()}. Never guess a year that the page does not show.
+Today is ${new Date().toDateString()}; 3 days from now is ${new Date(Date.now() + 3 * 86_400_000).toDateString()}. Compare dates carefully. Never guess a year that the page does not show.
 Rules:
 - You are already signed in to the user's accounts. Never type passwords.
 - Use do_on_page for one action at a time, then check the page it returns.
@@ -157,7 +157,9 @@ Rules:
 
     const prompt = opts.approvedAction
       ? `Chore: ${chore.title}. The user approved this step: "${opts.approvedAction.action}". Start at ${startUrl}, do exactly that step, check it worked, then call finish.`
-      : `Chore: ${chore.title}. ${chore.task}\nStart by opening ${startUrl}.`;
+      : `Chore: ${chore.title}. ${chore.task}\nStart by opening ${startUrl}.${opts.isRetry
+          ? "\nAn earlier try of this chore stopped partway and may already have done some of it. Check the page and report the result as it is now, including anything already done (for example a due date that is already pushed back)."
+          : ""}`;
 
     step(`Started: ${chore.title}`);
     const out: any = await agent.generate(prompt, { maxSteps: 16 });
