@@ -1,0 +1,30 @@
+{
+  "name": "sloth-errands",
+  "private": true,
+  "type": "module",
+  "scripts": {},
+  "dependencies": {
+    "@ai-sdk/groq": "^4.0.68",
+    "@browserbasehq/stagehand": "^4.3.0",
+    "@mastra/core": "^1.79.0",
+    "@temporalio/activity": "^1.24.0",
+    "@temporalio/client": "^1.24.0",
+    "@temporalio/worker": "^1.24.0",
+    "@temporalio/workflow": "^1.24.0",
+    "ai": "^7.0.149",
+    "better-sqlite3": "^13.0.3",
+    "dotenv": "^18.0.9",
+    "drizzle-orm": "^0.45.4",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^9.6.0",
+    "@types/node": "^26.6.5",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2"
+  },
+  "trustedDependencies": [
+    "@swc/core",
+    "protobufjs"
+  ]
+}
