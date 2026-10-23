@@ -40,7 +40,7 @@ if (manual) {
   while (Date.now() < until && (await run.page.evaluate(() => !!document.querySelector("input[type=password]")))) {
     await new Promise((r) => setTimeout(r, 2000));
   }
-} else {
+} else if (await run.page.evaluate(() => !!document.querySelector("input[type=password]"))) {
   for (const [selector, value] of Object.entries(login.fields)) await run.page.locator(selector).fill(value);
   await run.page.locator(login.submit).click();
   await new Promise((r) => setTimeout(r, 1500));
