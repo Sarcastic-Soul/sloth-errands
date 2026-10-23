@@ -46,6 +46,13 @@ Night workflow: `night-2026-10-23-05-06-13`
 - 05:09:23 UTC, 10s: https://www.browserbase.com/sessions/5fd03f70-04a1-4ca3-8444-2f8d833f22fa
 - 05:10:09 UTC, 10s: https://www.browserbase.com/sessions/5805e4c2-c5ed-44ad-b8d6-63e1dfebc01a
 
+## Video
+
+- `night-run-full.mp4`: the whole run, from Start to every chore DONE (4 min 24 s, real time).
+  The phone recording sits in the bottom right, lined up to the same clock: the Guardian push
+  arrives at 10:38:24. The Guardian app blocks screen recording on its approve screen, so that
+  part shows black, then "Success!".
+
 ## Screenshots
 
 - `shots/temporal-list.png`: the night and its five child workflows
