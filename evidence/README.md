@@ -49,9 +49,10 @@ Night workflow: `night-2026-10-23-05-06-13`
 ## Video
 
 - `night-run-full.mp4`: the whole run, from Start to every chore DONE (4 min 24 s, real time).
-  The phone recording sits in the bottom right, lined up to the same clock: the Guardian push
-  arrives at 10:38:24. The Guardian app blocks screen recording on its approve screen, so that
-  part shows black, then "Success!".
+  The phone recording sits in a phone frame to the right of the laptop, lined up to the same
+  clock: the Guardian push arrives at 10:38:24. The Guardian app blocks screen recording on its
+  approve screen for security, so that part is black (a note on the video says so), then
+  "Success!".
 
 ## Screenshots
 

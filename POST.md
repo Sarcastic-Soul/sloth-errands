@@ -32,7 +32,7 @@ The video is one real, uncut night run, sped up only by demo pacing (retries eve
 2. The fine is held as a ticket on the right: "Confirm payment of the ₹50 library fine?"
 3. While it is held, I kill the worker process and start it again. The board doesn't notice. The held chore is still held, because its state lives in Temporal, not in my process.
 4. The parcel tracker fails twice (on purpose). The row shows "DELAYED, try 2/5" and then turns DONE.
-5. At wake-up time my phone gets the Guardian push. I approve it, and 20 seconds later the fine is paid.
+5. At wake-up time my phone gets the Guardian push. I approve it, and 20 seconds later the fine is paid. (The phone screen goes black for a few seconds there: Guardian blocks screen recording on its approve screen, which is exactly what you want from an app that approves payments.)
 
 ![Guardian push arriving on the phone](https://raw.githubusercontent.com/Sarcastic-Soul/sloth-errands/main/docs/phone-push.png)
 
