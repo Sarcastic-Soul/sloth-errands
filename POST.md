@@ -63,6 +63,8 @@ The interesting rule is in `do_on_page`. Before any action runs, it is checked a
 - A chore that is "not ready" (booking not open) sleeps and checks again.
 - A held step waits until wake-up time with a durable timer, then asks for approval. A CIBA push lives for 5 minutes at most, so if I sleep through it, the workflow asks again a bit later, and gives up without paying after a deadline.
 
+![Temporal history of the parcel chore: two failed tries, timers, then success](https://raw.githubusercontent.com/Sarcastic-Soul/sloth-errands/main/evidence/shots/temporal-parcel-history.png)
+
 All of this is just `await sleep()` and `await condition()` in plain TypeScript, and it survives the worker crashing, which I show in the video.
 
 **The approval: Auth0 for AI Agents.** The web app uses Auth0 to sign me in. The morning question uses Auth0's Client-Initiated Backchannel Authentication (CIBA): the workflow calls `/bc-authorize` with my user ID and a short binding message ("Pay INR 50 library fine..."). Auth0 sends the Guardian push, and the workflow polls the token endpoint until I approve, deny, or it expires. The board also has Approve and Deny buttons, which send a Temporal signal after checking that the run is mine.
