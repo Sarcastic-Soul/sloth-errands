@@ -24,7 +24,7 @@ So the lazy person here is me, and anyone like me who keeps getting late fees fo
 
 ## Demo
 
-<!-- TODO: video link -->
+{% embed https://youtu.be/ko5yKlxEbSs %}
 
 The video is one real, uncut night run, sped up only by demo pacing (retries every 20 seconds instead of every 15 minutes, wake-up in 2 minutes instead of 7 hours). In it you can see:
 

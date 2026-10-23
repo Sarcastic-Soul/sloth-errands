@@ -62,6 +62,8 @@ One chore:
 
 ## Proof
 
+Demo video: https://youtu.be/ko5yKlxEbSs
+
 Everything runs on one laptop, so the run is recorded. See [`evidence/`](evidence/README.md)
 for the timeline of a full recorded night, the demo sites' own log of what changed, the
 Browserbase session list and Temporal UI screenshots.
