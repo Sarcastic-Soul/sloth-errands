@@ -1,0 +1,39 @@
+{
+  "name": "web",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@auth0/nextjs-auth0": "^4.33.0",
+    "@phosphor-icons/react": "^2.1.10",
+    "@temporalio/client": "^1.24.0",
+    "@temporalio/common": "1.24.0",
+    "dotenv": "^18.0.9",
+    "motion": "^14.6.0",
+    "next": "16.4.2",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "server-only": "^0.0.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/turbopack": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  },
+  "packageManager": "bun@1.4.3",
+  "ignoreScripts": [
+    "sharp",
+    "unrs-resolver"
+  ],
+  "trustedDependencies": [
+    "sharp",
+    "unrs-resolver"
+  ]
+}

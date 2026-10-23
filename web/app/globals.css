@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+/* Departure Board: a Swiss railway timetable. One accent, signal red-orange. */
+:root {
+  --bg: #f0f0eb;
+  --bg-2: #e3e3dc;
+  --ink: #1b1c1e;
+  --ink-2: #5d5f60;
+  --line: #c9c9c1;
+  --signal: #e0401b;
+  --signal-ink: #b5300f;
+  --ok: #2f6b3a;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-bg-2: var(--bg-2);
+  --color-ink: var(--ink);
+  --color-ink-2: var(--ink-2);
+  --color-line: var(--line);
+  --color-signal: var(--signal);
+  --color-signal-ink: var(--signal-ink);
+  --color-ok: var(--ok);
+  --font-sans: var(--font-archivo), "Archivo", system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains), "JetBrains Mono", ui-monospace, monospace;
+}
+
+html {
+  background: var(--bg);
+}
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+::selection {
+  background: var(--signal);
+  color: var(--bg);
+}
+
+:focus-visible {
+  outline: 3px solid var(--signal);
+  outline-offset: 2px;
+}
+
+.tnum {
+  font-variant-numeric: tabular-nums;
+}

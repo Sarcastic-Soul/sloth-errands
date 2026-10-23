@@ -10,6 +10,7 @@
     "login": "tsx scripts/login.ts",
     "try": "tsx scripts/try-chore.ts",
     "typecheck": "tsc --noEmit",
+    "web": "cd web && bun run dev",
     "tunnel": "sh scripts/tunnel.sh"
   },
   "dependencies": {
