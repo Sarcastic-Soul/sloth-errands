@@ -9,7 +9,8 @@
     "night": "tsx scripts/night.ts",
     "login": "tsx scripts/login.ts",
     "try": "tsx scripts/try-chore.ts",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "tunnel": "sh scripts/tunnel.sh"
   },
   "dependencies": {
     "@ai-sdk/groq": "^4.0.68",
